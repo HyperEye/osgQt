@@ -9,20 +9,20 @@ IF( Qt6Widgets_FOUND )
     SET(HEADER_PATH ../../include/osgQOpenGL)
 
     SET(SOURCE_H 
-        ${HEADER_PATH}/osgQOpenGLWidget
-        ${HEADER_PATH}/osgQOpenGLWindow
-        ${HEADER_PATH}/OSGRenderer
+        ${HEADER_PATH}/osgQOpenGLWidget.h
+        ${HEADER_PATH}/osgQOpenGLWindow.h
+        ${HEADER_PATH}/OSGRenderer.h
     )
 
     qt6_wrap_cpp(SOURCES_H_MOC ${SOURCE_H} #[[OPTIONS ${MOC_OPTIONS}]])
 
     SET(TARGET_H
         ${SOURCE_H}
-        ${HEADER_PATH}/CullVisitorEx
-        ${HEADER_PATH}/GraphicsWindowEx
-        ${HEADER_PATH}/RenderStageEx
-        ${HEADER_PATH}/StateEx
-        ${CMAKE_CURRENT_BINARY_DIR}/Export
+        ${HEADER_PATH}/CullVisitorEx.h
+        ${HEADER_PATH}/GraphicsWindowEx.h
+        ${HEADER_PATH}/RenderStageEx.h
+        ${HEADER_PATH}/StateEx.h
+        ${CMAKE_CURRENT_BINARY_DIR}/Export.h
     )
 
 
@@ -50,6 +50,6 @@ IF( Qt6Widgets_FOUND )
 
     SETUP_LIBRARY(${LIB_NAME})
 
-    generate_export_header(${LIB_NAME} EXPORT_FILE_NAME "Export")
+    generate_export_header(${LIB_NAME} EXPORT_FILE_NAME "Export.h")
 
 ENDIF()

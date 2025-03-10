@@ -16,7 +16,7 @@ SET (EXAMPLE_NAME osgviewerQt )
 
 SETUP_EXAMPLE( ${EXAMPLE_NAME} )
 
-SET(TARGET_LIBRARIES Qt6::Widgets Qt6::OpenGL Qt6::OpenGLWidgets)
+SET(TARGET_LIBRARIES Qt6::OpenGL)
 
-target_link_libraries( example_${EXAMPLE_NAME} Widgets OpenGL OpenGLWidgets osgQOpenGL )
+target_link_libraries( example_${EXAMPLE_NAME} osgQOpenGL )
 
